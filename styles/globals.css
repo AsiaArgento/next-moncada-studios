@@ -14,3 +14,129 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.active {
+  color: grey;
+}
+
+/* Mobile-Portrait - Mobile First */
+.navBar {
+  position: relative;
+}
+
+.navBar button {
+  position: fixed;
+  right: 40px;
+  top: 40px;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.menuNav {
+  overflow-y: hidden;
+  list-style: none;
+  position: fixed;
+  top: 0;
+  background: #144ACE;
+  left: 0;
+  bottom: 0;
+  height: 100vh;
+  transform: translate3d(-100%, 0, 0);
+  transition: all 0.4s ease-in-out;
+  width: 0;
+  overflow: hidden;
+  z-index: 9;
+  display: flex;
+  align-items: center;
+}
+
+.menuNav nav {
+  height: 350px;
+  padding-left: 2.4em;
+  flex-direction: column;
+  display: flex;
+}
+
+.menuNavRight {
+  overflow-y: scroll;
+  list-style: none;
+  position: fixed;
+  top: 0;
+  background: #144ACE;
+  right: 0;
+  bottom: 0;
+  height: 100vh;
+  transform: translate3d(0, 0, -100%);
+  transition: all 0.5s ease-in-out;
+  width: 0;
+  overflow: hidden;
+  z-index: 9;
+  display: flex;
+  align-items: center;
+}
+
+.menuNav.showMenu {
+  width: 75%;
+  top: 0;
+  bottom: 0;
+  transform: translate3d(0, 0, 0);
+  z-index: 5;
+}
+
+.menuNavRight.showMenuRight {
+  width: 25%;
+  top: 0;
+  bottom: 0;
+  transform: translate3d(0, 0, 0);
+  z-index: 2;
+  background-color: #212121;
+}
+
+.menuNav a {
+  font-size: 1.8rem;
+	flex-grow: 1;
+	display: block;
+	color: white;
+  text-align: left;
+}
+
+.menuNav a:hover {
+  color: #F8FF21;
+  transform: scale(1.1);
+  transition: all ease-in-out 500ms;
+}
+
+.menuNav li:first-child {
+  margin-top: 7rem;
+}
+
+.portfolioImage {
+  height: 200px!important;
+}
+
+/* Mobile-Landscape (and larger) */
+@media (min-width: 480px) {
+
+}
+
+/* Tablet-Portrait (and larger) */
+@media (min-width: 768px) {
+  .menuNav a {
+    font-size: 2.5rem;
+  }
+}
+
+/* Tablet-Landscape (and larger) */
+@media (min-width: 992px) {
+
+}
+
+/* X-Large (and larger) */
+@media (min-width: 1680px) {
+
+}
+
+/* Laptops (and larger) */
+@media (min-width: 1200px) {
+
+}
