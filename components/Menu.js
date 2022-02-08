@@ -28,13 +28,13 @@ function Menu() {
             </div>
             <section id="menu" className={`menuNav ${navbarOpen ? " showMenu" : ""}`}>
                 <nav>
-                <Link href="/">
-                <a>
-                    <div className={styles.logoWhite}>
-                        <Image src={moncadaStudiosLogoWhite} alt="logo" />
-                    </div>
-                </a>
-                </Link>
+                    <Link href="/">
+                    <a>
+                        <div className={styles.logoWhite}>
+                            <Image src={moncadaStudiosLogoWhite} alt="logo" />
+                        </div>
+                    </a>
+                    </Link>
                     <Link href='/'><a>Home</a></Link>
                     <Link href='/about-us'><a>About Us</a></Link>
                     <Link href='/services'><a>Services</a></Link>
@@ -44,10 +44,10 @@ function Menu() {
             </section>
             <section className={`menuNavRight ${navbarOpen ? " showMenuRight" : ""}`}>
                 <div className={styles.socialIconsList}>
-                <FaInstagram style={{ color: "#fff" }} />
-                <FaFacebook style={{ color: "#fff" }} />
-                <FaLinkedinIn style={{ color: "#fff" }} />
-                <FaYoutube style={{ color: "#fff" }} />
+                    <a href='#'><FaInstagram /></a>
+                    <a href='#'><FaFacebook /></a>
+                    <a href='#'><FaLinkedinIn /></a>
+                    <a href='#'><FaYoutube /></a>
                 </div>
             </section>
         </>

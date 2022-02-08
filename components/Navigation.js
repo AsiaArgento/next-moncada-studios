@@ -7,34 +7,36 @@ import { useRouter } from 'next/router';
 
 function Navigation() {
     const router = useRouter();
-  return <>
-    <nav className={styles.navigation}>
-        <Link href="/">
-            <a>
-                <div className={styles.logo}>
-                    <Image src={moncadaStudiosLogo} alt="logo" />
+    return <>
+        <div className={styles.container}>
+            <nav className={styles.navigation}>
+                <Link href="/">
+                    <a>
+                        <div className={styles.logo}>
+                            <Image src={moncadaStudiosLogo} alt="logo" />
+                        </div>
+                    </a>
+                </Link>
+                <div className={styles.navLinks}>
+                    <Link href="/">
+                    <a className={router.pathname == "/" ? "active" : ""}>Home</a>
+                    </Link>
+                    <Link href="/about-us">
+                    <a className={router.pathname == "/about" ? "active" : ""}>About Us</a>
+                    </Link>
+                    <Link href="/services">
+                    <a className={router.pathname == "/services" ? "active" : ""}>Services</a>
+                    </Link>
+                    <Link href="/results">
+                    <a className={router.pathname == "/results" ? "active" : ""}>Results</a>
+                    </Link>
+                    <Link href="/contact">
+                    <a className={router.pathname == "/contact" ? "active" : ""}>Contact</a>
+                    </Link>
                 </div>
-            </a>
-        </Link>
-        <div className={styles.navLinks}>
-            <Link href="/">
-            <a className={router.pathname == "/" ? "active" : ""}>Home</a>
-            </Link>
-            <Link href="/about">
-            <a className={router.pathname == "/about" ? "active" : ""}>About</a>
-            </Link>
-            <Link href="/services">
-            <a className={router.pathname == "/services" ? "active" : ""}>Services</a>
-            </Link>
-            <Link href="/results">
-            <a className={router.pathname == "/results" ? "active" : ""}>Results</a>
-            </Link>
-            <Link href="/contact">
-            <a className={router.pathname == "/contact" ? "active" : ""}>Contact</a>
-            </Link>
+            </nav>
         </div>
-    </nav>
-  </>;
+    </>;
 }
 
 export default Navigation;

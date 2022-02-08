@@ -3,6 +3,7 @@ import Navigation from '../components/Navigation'
 import Banner from '../components/Banner'
 import Menu from '../components/Menu'
 import Footer from '../components/Footer'
+import SectionWhoWeAre from '../components/SectionWhoWeAre'
 
 export default function Home() {
   return (
@@ -16,6 +17,12 @@ export default function Home() {
       <Navigation />
       <Banner 
         title='Moncada Studios is a digital agency that excels in modern design and development.'
+      />
+      <SectionWhoWeAre 
+        title='Who We Are'
+        subTitle='Problem Solvers'
+        description='A highly accomplished team that aimed to bring a modern approach to brand development
+        and digital marketing. We bring real skills to the table.  '
       />
       <Footer />
     </>
